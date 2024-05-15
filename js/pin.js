@@ -61,3 +61,21 @@ function generatepin(){
 
 
   })
+
+   document.getElementById('verify-button').addEventListener('click',function(){
+
+       const displaypinfeild = document.getElementById('display-pin')
+       const currentfeild = displaypinfeild.value;
+       const inputnumberfeild = document.getElementById('input-feild')
+       const currentinputfeild = inputnumberfeild.value
+
+        if( currentfeild === currentinputfeild){
+
+            console.log('correct pin')
+        }
+        else{
+
+            console.log('incorrect pin')
+        }
+
+   })
