@@ -26,3 +26,23 @@ function generatepin(){
   displayPinfeild.value = pin;
 
  })
+
+  document.getElementById('calculator').addEventListener('click',function(event){
+    const number = event.target.innerText
+    if(isNaN(number)){
+
+        console.log(number)
+    }
+    else{
+
+        const inputfeild = document.getElementById('input-feild')
+        const previousinputfeild =inputfeild.value;
+        const newinputfeild = previousinputfeild +number;
+        inputfeild.value=newinputfeild
+    }
+
+    console.log()
+
+
+
+  })
