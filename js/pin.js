@@ -68,14 +68,20 @@ function generatepin(){
        const currentfeild = displaypinfeild.value;
        const inputnumberfeild = document.getElementById('input-feild')
        const currentinputfeild = inputnumberfeild.value
+       const pinsucessmessage = document.getElementById('pin-sucess')
+         const pinfailuremessage = document.getElementById('pin-failure')
 
         if( currentfeild === currentinputfeild){
 
-            console.log('correct pin')
+            
+            pinsucessmessage.style.display = 'block';
+            pinfailuremessage.style.display = 'none';
         }
         else{
 
-            console.log('incorrect pin')
+            
+          pinfailuremessage.style.display = 'block';
+            pinsucessmessage.style.display = 'none';
         }
 
    })
