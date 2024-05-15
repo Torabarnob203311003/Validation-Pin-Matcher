@@ -29,19 +29,34 @@ function generatepin(){
 
   document.getElementById('calculator').addEventListener('click',function(event){
     const number = event.target.innerText
+      const inputfeild = document.getElementById('input-feild')
+        const previousinputfeild =inputfeild.value;
     if(isNaN(number)){
 
-        console.log(number)
+        if(number === 'C'){
+
+
+            inputfeild.value = ' ';
+
+        }
+        else if(number === '<')
+        {
+                const digits =previousinputfeild.split('');
+                digits.pop();
+                const remainDigits = digits.join('');
+                 inputfeild.value = remainDigits;
+
+
+        }
     }
     else{
 
-        const inputfeild = document.getElementById('input-feild')
-        const previousinputfeild =inputfeild.value;
+      
         const newinputfeild = previousinputfeild +number;
         inputfeild.value=newinputfeild
     }
 
-    console.log()
+   
 
 
 
